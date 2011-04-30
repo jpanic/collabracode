@@ -1,10 +1,18 @@
-<!DOCTYPE html> 
-<html> 
-    <head> 
+<!DOCTYPE html>
+<html>
+    <head>
         <title>Day 1 - Traversing</title>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
-    </head> 
-    <body> 
+        <script type="text/javascript">
+        $(function(){
+			console.log($('li ol, li ul'));
+			console.log($('ol li:last-child, ul li:last-child'));
+			console.log($('li').has('span'));
+        });
+
+        </script>
+    </head>
+    <body>
         <div id="outer-wrapping">
             <h1>Objectives</h1>
             <ol>
@@ -25,5 +33,5 @@
                 <li>Fourth <span>item</span></li>
             </ul>
         </div>
-    </body> 
+    </body>
 </html>
