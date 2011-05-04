@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
+<!DOCTYPE html> 
+<html> 
+    <head> 
         <title>Day 2 - Advanced Events</title>
         <style type="text/css" media="screen">
             li:hover { background: #D9E4FF; }
         </style>
-    </head>
-    <body>
+    </head> 
+    <body> 
         <div id="outer-wrapping">
             <h1>Day 1 - Event Driven Menu</h1>
             <ul>
@@ -39,7 +39,7 @@
                                 <li>Spring</li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul>                    
                 </li>
                 <li>About
                     <ul>
@@ -49,6 +49,24 @@
                 </li>
             </ul>
             <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+            <script type="text/javascript" charset="utf-8">
+                $(function () {
+                    // Hide all sub lists
+                    $('li ul').hide();
+                    
+                    // Use the .hover shortcut
+                    $('li').hover(
+                        // Executed on mouseon
+                        function () {
+                            $(this).children('ul').show();
+                        }, 
+                        
+                        // Executed on mouseoff
+                        function () {
+                        $(this).children('ul').hide();
+                    });
+                });
+            </script>
         </div>
-    </body>
+    </body> 
 </html>
